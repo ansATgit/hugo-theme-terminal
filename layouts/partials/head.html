@@ -20,6 +20,12 @@
   <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 {{- end }}
 
+<!-- Prism CSS for syntax highlighing of code -->
+{{ if $.Site.Params.usePrismCDN }}
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-dark.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-tomorrow.min.css">
+{{ end }}
+
 <!-- Icons -->
 <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon-192x192.png" | absURL }}">
 {{ if isset $.Site.Params "favicon" }}
